@@ -1,0 +1,183 @@
+{
+    "imp":
+    [
+        {
+            "ext":
+            {
+                "data":
+                {
+                    "adserver":
+                    {
+                        "name": "gam",
+                        "adslot": "test"
+                    },
+                    "pbadslot": "test",
+                    "gpid": "test"
+                },
+                "gpid": "test",
+                "prebid":
+                {
+                    "bidder":
+                    {
+                        "appnexus":
+                        {
+                            "placement_id": 1,
+                            "use_pmt_rule": false
+                        }
+                    },
+                    "adunitcode": "25e8ad9f-13a4-4404-ba74-f9eebff0e86c",
+                    "floors":
+                    {
+                        "floorMin": 0.01
+                    }
+                }
+            },
+            "id": "2529eeea-813e-4da6-838f-f91c28d64867",
+            "banner":
+            {
+                "topframe": 1,
+                "format":
+                [
+                    {
+                        "w": 728,
+                        "h": 90
+                    }
+                ],
+                "pos": 1
+            },
+            "bidfloor": 0.01,
+            "bidfloorcur": "USD"
+        }
+    ],
+    "site":
+    {
+        "domain": "test.com",
+        "publisher":
+        {
+            "domain": "test.com",
+            "id": "1"
+        },
+        "page": "https://www.test.com/"
+    },
+    "device":
+    {
+        "w": 843,
+        "h": 901,
+        "dnt": 0,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+        "language": "en",
+        "sua":
+        {
+            "source": 1,
+            "platform":
+            {
+                "brand": "macOS"
+            },
+            "browsers":
+            [
+                {
+                    "brand": "Google Chrome",
+                    "version":
+                    [
+                        "117"
+                    ]
+                },
+                {
+                    "brand": "Not;A=Brand",
+                    "version":
+                    [
+                        "8"
+                    ]
+                },
+                {
+                    "brand": "Chromium",
+                    "version":
+                    [
+                        "117"
+                    ]
+                }
+            ],
+            "mobile": 0
+        }
+    },
+    "id": "fc4670ce-4985-4316-a245-b43c885dc37a",
+    "test": 1,
+    "cur":
+    [
+        "USD"
+    ],
+    "source":
+    {
+        "ext":
+        {
+            "schain":
+            {
+                "ver": "1.0",
+                "complete": 1,
+                "nodes":
+                [
+                    {
+                        "asi": "example.com",
+                        "sid": "1234",
+                        "hp": 1
+                    }
+                ]
+            }
+        }
+    },
+    "ext":
+    {
+        "prebid":
+        {
+            "cache":
+            {
+                "bids":
+                {
+                    "returnCreative": true
+                },
+                "vastxml":
+                {
+                    "returnCreative": true
+                }
+            },
+            "auctiontimestamp": 1698390609882,
+            "targeting":
+            {
+                "includewinners": true,
+                "includebidderkeys": false
+            },
+            "schains":
+            [
+                {
+                    "bidders":
+                    [
+                        "appnexus"
+                    ],
+                    "schain":
+                    {
+                        "ver": "1.0",
+                        "complete": 1,
+                        "nodes":
+                        [
+                            {
+                                "asi": "example.com",
+                                "sid": "1234",
+                                "hp": 1
+                            }
+                        ]
+                    }
+                }
+            ],
+            "floors":
+            {
+                "enabled": false,
+                "floorMin": 0.01,
+                "floorMinCur": "USD"
+            },
+            "createtids": false
+        }
+    },
+    "user":
+    {},
+    "tmax": 1700
+}

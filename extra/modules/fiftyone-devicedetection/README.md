@@ -112,6 +112,45 @@ Minimal sample (only required):
         path: "51Degrees-LiteV4.1.hash" # string, REQUIRED, download the sample from https://github.com/51Degrees/device-detection-data/blob/main/51Degrees-LiteV4.1.hash or Enterprise from https://51degrees.com/pricing
 ```
 
+## Running the demo
+
+1. Build the server bundle JAR as described in [[Build Project](../../../docs/build.md#build-project)], e.g.
+
+```bash
+mvn clean package --file extra/pom.xml
+```
+
+2. Download `51Degrees-LiteV4.1.hash` from [[GitHub](https://github.com/51Degrees/device-detection-data/blob/main/51Degrees-LiteV4.1.hash)] and put it in the project root directory.
+
+3. Start server bundle JAR as described in [[Running project](../../../docs/run.md#running-project)], e.g.
+
+```bash
+java -jar target/prebid-server-bundle.jar --spring.config.additional-location=sample/prebid-config-with-51d-dd.yaml
+```
+
+4. Run sample request against the server as described in [[requests/README](../../../sample/requests/README.txt)], e.g.
+
+```bash
+curl http://localhost:8080/openrtb2/auction --data @extra/modules/fiftyone-devicedetection/sample-requests/data.json
+```
+
+5. See the `device` object be enriched
+
+```diff
+                     },
++                    "os": "macOS",
++                    "osv": "Unknown",
+                     "h": 901,
+                     "w": 843,
+-                    "language": "en"
++                    "language": "en",
++                    "ext": {
++                        "fiftyonedegrees_deviceId": "17595-18120-128272"
++                    }
+                 },
+```
+
+
 ## Maintainer contacts
 
 Any suggestions or questions can be directed to [support@51degrees.com](support@51degrees.com) e-mail.
